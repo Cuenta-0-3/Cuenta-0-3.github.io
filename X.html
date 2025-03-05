@@ -118,8 +118,13 @@
 
     <script>
         function toggleInfo() {
-            var info = document.getElementById('x');
-            info.classList.toggle('show');
+            console.log("toggleInfo() llamada"); // Verifica en la consola
+            var infoDiv = document.getElementById("x");
+            if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                infoDiv.style.display = "block";
+            } else {
+                infoDiv.style.display = "none";
+            }
         }
     </script>
 </body>
