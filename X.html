@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X (Twitter)</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background: #000000; 
+            color: white; 
+            margin: 0; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        .container { 
+            padding: 20px; 
+            max-width: 500px; 
+            background: white; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+            border-radius: 15px; 
+            color: #333; 
+            width: 100%; 
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        .logo { 
+            width: 100px; 
+            transition: transform 0.3s ease;
+        }
+        .logo:hover { 
+            transform: scale(1.1); 
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        a, button { 
+            display: inline-block; 
+            text-decoration: none; 
+            color: white; 
+            background-color: #1DA1F2; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            transition: 0.3s; 
+            cursor: pointer;
+            border: none;
+        }
+        a:hover, button:hover { 
+            background-color: #0d8ccf; 
+            transform: scale(1.05); 
+        }
+        .history-text {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 1s forwards;
+            animation-delay: 0.5s;
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .info {
+            display: none;
+            margin-top: 20px;
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .info.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/X_logo.jpg/1200px-X_logo.jpg" class="logo" alt="X">
+        <h1>X</h1>
+        <p>Comparte tu estado y pensamientos en mensajes cortos.</p>
+        <div class="history-text">
+            <p>Lanzado en 2006, Twitter se convirtió en una de las plataformas de microblogging más influyentes para conectar con otros. En 2023, Twitter cambió su nombre a "X" como parte de una renovación de marca impulsada por su nuevo propietario, Elon Musk, para reflejar su visión de una plataforma más amplia de comunicaciones y servicios, más allá de solo mensajes cortos.</p>
+        </div>
+        <div class="buttons">
+            <a href="https://www.x.com" target="_blank">Iniciar sesión</a>
+            <button onclick="toggleInfo()">Más información</button>
+        </div>
+        <div id="x" class="info">
+            <h2>X (Twitter)</h2>
+            <p><strong>Fundación:</strong> 2006</p>
+            <p><strong>Usuarios activos:</strong> Más de 500 millones.</p>
+            <p>X (antes Twitter) es una plataforma de microblogging donde los usuarios pueden compartir noticias, pensamientos y debates en tiempo real.</p>
+            <p>Una de las características más destacadas de X es la capacidad de interactuar con temas globales al instante, con la posibilidad de participar en tendencias que marcan la agenda mundial.</p>
+            <p>A lo largo de los años, X ha sido una herramienta esencial para el periodismo, permitiendo la difusión de noticias de última hora y facilitando la participación en discusiones públicas sobre diversos temas.</p>
+            <p>Sin embargo, la plataforma también ha sido criticada por la propagación de desinformación, ya que los 280 caracteres permiten la circulación rápida de mensajes que a veces carecen de contexto o veracidad.</p>
+            <p>A pesar de sus desafíos, X sigue siendo una de las redes sociales más influyentes, y su papel en la política, el entretenimiento y los movimientos sociales continúa siendo relevante.</p>
+   <a href="https://es.wikipedia.org/wiki/Twitter" target="_blank">Más información en Wikipedia</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var info = document.getElementById('x');
+            info.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+

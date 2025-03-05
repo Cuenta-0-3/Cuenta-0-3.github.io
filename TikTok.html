@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background: #000000; 
+            color: white; 
+            margin: 0; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        .container { 
+            padding: 20px; 
+            max-width: 500px; 
+            background: white; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+            border-radius: 15px; 
+            color: #333; 
+            width: 100%; 
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        .logo { 
+            width: 100px; 
+            transition: transform 0.3s ease;
+        }
+        .logo:hover { 
+            transform: scale(1.1); 
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        a, button { 
+            display: inline-block; 
+            text-decoration: none; 
+            color: white; 
+            background-color: #25F4EE; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            transition: 0.3s; 
+            cursor: pointer;
+            border: none;
+        }
+        a:hover, button:hover { 
+            background-color: #00B8B0; 
+            transform: scale(1.05); 
+        }
+        .history-text {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 1s forwards;
+            animation-delay: 0.5s;
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .info {
+            display: none;
+            margin-top: 20px;
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .info.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://static.wikia.nocookie.net/tiktok/images/e/eb/TikTok_Logo.png/revision/latest?cb=20210816124125" class="logo" alt="TikTok">
+        <h1>TikTok</h1>
+        <p>Crea y comparte videos cortos.</p>
+        <div class="history-text">
+            <p>Iniciado en 2016 en China como Douyin, TikTok se convirtió en una de las plataformas más populares para la creación y distribución de videos musicales cortos.</p>
+        </div>
+        <div class="buttons">
+            <a href="https://www.tiktok.com" target="_blank">Iniciar sesión</a>
+            <button onclick="toggleInfo()">Más información</button>
+        </div>
+        <div id="tiktok" class="info">
+            <h2>TikTok</h2>
+            <p><strong>Fundación:</strong> 2016</p>
+            <p><strong>Usuarios activos:</strong> Más de 1.000 millones.</p>
+            <p>TikTok ha cambiado la forma en que consumimos contenido breve, con videos virales de 15 a 60 segundos que han dado fama a muchos creadores.</p>
+            <p>Su formato de videos cortos ha desafiado otras plataformas y ha dado lugar a nuevas tendencias, como bailes, desafíos y memes. TikTok también ha permitido que muchas marcas encuentren una forma innovadora de conectarse con el público más joven.</p>
+            <p>La plataforma ha sido crítica para el surgimiento de influencers que ganan popularidad rápidamente gracias a su contenido viral, especialmente en áreas como moda, comedia y música.</p>
+            <p>A pesar de su éxito, TikTok también ha sido objeto de preocupaciones por su seguridad y la protección de datos personales, en especial debido a su origen chino, lo que ha generado inquietudes en varios gobiernos sobre el control de la información.</p>
+            <p>Además, TikTok ha abierto nuevas puertas para el marketing digital, permitiendo a las marcas crear contenido nativo que se integra de manera natural en la experiencia del usuario.</p>
+ <a href="https://es.wikipedia.org/wiki/TikTok" target="_blank">Más información en Wikipedia</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var info = document.getElementById('tiktok');
+            info.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+

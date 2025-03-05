@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background: #FF0000; 
+            color: white; 
+            margin: 0; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        .container { 
+            padding: 20px; 
+            max-width: 500px; 
+            background: white; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+            border-radius: 15px; 
+            color: #333; 
+            width: 100%; 
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        .logo { 
+            width: 100px; 
+            transition: transform 0.3s ease;
+        }
+        .logo:hover { 
+            transform: scale(1.1); 
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        a, button { 
+            display: inline-block; 
+            text-decoration: none; 
+            color: white; 
+            background-color: #FF0000; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            transition: 0.3s; 
+            cursor: pointer;
+            border: none;
+        }
+        a:hover, button:hover { 
+            background-color: #CC0000; 
+            transform: scale(1.05); 
+        }
+        .history-text {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 1s forwards;
+            animation-delay: 0.5s;
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .info {
+            display: none;
+            margin-top: 20px;
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .info.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" class="logo" alt="YouTube">
+        <h1>YouTube</h1>
+        <p>Comparte y visualiza contenido en video.</p>
+        <div class="history-text">
+            <p>Lanzado en 2005 por Steve Chen, Chad Hurley y Jawed Karim, YouTube rápidamente revolucionó la forma en que consumimos contenido multimedia.</p>
+        </div>
+        <div class="buttons">
+            <a href="https://www.youtube.com" target="_blank">Iniciar sesión</a>
+            <button onclick="toggleInfo()">Más información</button>
+        </div>
+        <div id="youtube" class="info">
+            <h2>YouTube</h2>
+            <p><strong>Fundación:</strong> 2005</p>
+            <p><strong>Usuarios activos:</strong> Más de 2.500 millones.</p>
+            <p>YouTube es el rey del contenido en video, sirviendo como la principal plataforma para educación, entretenimiento e información.</p>
+            <p>A lo largo de los años, YouTube ha dado lugar a una nueva generación de creadores de contenido, quienes han convertido la plataforma en un medio para ganar dinero a través de anuncios y patrocinios, dando paso a nuevas formas de entretenimiento.</p>
+            <p>Además de los videos, YouTube ofrece transmisiones en vivo y contenido exclusivo, lo que ha ampliado su oferta más allá de los videos pregrabados. Esto ha atraído a creadores de diferentes industrias, desde gamers hasta educadores.</p>
+            <p>YouTube ha sido una herramienta poderosa en la educación, con miles de tutoriales disponibles que enseñan desde habilidades tecnológicas hasta cocina, pasando por música y ciencia.</p>
+            <p>La plataforma también ha tenido un impacto en la música, convirtiéndose en la principal fuente para el lanzamiento de videoclips y la distribución de canciones, cambiando la industria musical y la forma en que los artistas interactúan con sus seguidores.</p>
+<a href="https://es.wikipedia.org/wiki/YouTube" target="_blank">Más información en Wikipedia</a>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var info = document.getElementById('youtube');
+            info.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+
+
+

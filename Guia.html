@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociales</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background-color: #4a6a92;
+            color: #333; 
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('https://www.transparenttextures.com/patterns/45-degree-fabric-light.png');
+            background-size: cover;
+            padding-bottom: 80px; /* espacio para el pie de página */
+            transition: background-color 0.3s, color 0.3s;
+            animation: fadeIn 1.5s ease-out;
+        }
+        nav { 
+            background-color: #005bb5;
+            padding: 20px 0; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        nav h2 { 
+            color: white; 
+            margin: 0; 
+            font-size: 30px;
+            font-family: 'Times New Roman', sans-serif; 
+        }
+        nav p { 
+            color: #f2f2f2; 
+            font-size: 18px;
+            margin-top: 10px;
+            animation: fadeIn 1.5s ease-out;
+            animation-delay: 0.5s;
+        }
+        .container { 
+            margin: 20px auto; 
+            padding: 20px; 
+            max-width: 1000px; 
+            background: rgba(255, 255, 255, 0.8); 
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+            border-radius: 15px;
+            margin-bottom: 40px;
+            animation: slideUp 1.5s ease-out;
+        }
+        .social { 
+            display: flex; 
+            justify-content: center; 
+            flex-wrap: wrap; 
+            gap: 30px; 
+            margin-top: 20px; 
+        }
+        .social a { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-decoration: none; 
+            color: #333; 
+            font-size: 18px; 
+            border-radius: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s ease-in-out;
+            width: 120px;
+        }
+        .social a:hover { 
+            transform: scale(1.1); 
+            background-color: #e0f7ff;
+        }
+        .social img { 
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%; 
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #005bb5;
+            color: white;
+            padding: 10px;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-out;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Botón para mostrar tutoriales y recursos */
+        .show-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #005bb5;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .show-button:hover {
+            background-color: #004a8a;
+        }
+
+        /* Contenido oculto de tutoriales y recursos */
+        .tutorials-container {
+            display: none;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .tutorials-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .tutorials-container li {
+            margin: 10px 0;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .tutorials-container li:hover {
+            transform: translateX(10px);
+        }
+
+        .tutorials-container a {
+            text-decoration: none;
+            color: #005bb5;
+            font-size: 18px;
+        }
+
+        .tutorials-container a:hover {
+            color: #ff5733;
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Media Queries para hacer la página responsiva */
+        @media (max-width: 768px) {
+            nav h2 {
+                font-size: 24px;
+            }
+            nav p {
+                font-size: 16px;
+            }
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            .social a {
+                width: 100px;
+                font-size: 16px;
+            }
+            footer {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .social {
+                gap: 20px;
+            }
+            .social a {
+                width: 90px;
+                font-size: 14px;
+            }
+            footer {
+                font-size: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Redes Sociales</h2>
+        <p>Explora, comparte y conecta con las plataformas sociales más populares.</p>
+    </nav>
+    
+    <div id="intro" class="container">
+        <h1>Introducción a las Redes Sociales</h1>
+        <p>Las redes sociales son plataformas digitales que permiten la interacción entre personas, el intercambio de información y la creación de contenido. Algunas de las más populares incluyen Instagram, Facebook, YouTube, X y TikTok.</p>
+    </div>
+
+    <div class="container">
+        <h1>Explora las Redes Sociales</h1>
+        <div class="social">
+            <a href="instagram.html" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram">
+                <br>Instagram
+            </a>
+            <a href="facebook.html" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/220px-2021_Facebook_icon.svg.png" alt="Facebook">
+                <br>Facebook
+            </a>
+            <a href="youtube.html" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/YouTube_full-color_icon_%282024%29.svg/330px-YouTube_full-color_icon_%282024%29.svg.png" alt="YouTube">
+                <br>YouTube
+            </a>
+            <a href="x.html" target="_blank">
+                <img src="https://static.wikia.nocookie.net/logopedia/images/6/67/X_%28app_icon%29.svg/revision/latest/scale-to-width-down/250?cb=20230731123622" alt="X">
+                <br>X
+            </a>
+            <a href="tiktok.html" target="_blank">
+                <img src="https://static.wikia.nocookie.net/tiktok/images/e/eb/TikTok_Logo.png/revision/latest?cb=20210816124125" alt="TikTok">
+                <br>TikTok
+            </a>
+        </div>
+
+        <!-- Botón para mostrar tutoriales y recursos -->
+        <button class="show-button" onclick="toggleTutorials()">Mostrar Tutoriales y Recursos</button>
+
+        <!-- Contenido oculto de tutoriales y recursos -->
+        <div id="tutorials" class="tutorials-container">
+            <h2>Tutoriales y Recursos</h2>
+            <p>Descubre tutoriales y recursos para sacar el máximo provecho de las redes sociales. Aquí encontrarás guías para mejorar tu experiencia y aprender nuevas habilidades.</p>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=fCzLMP9r6RE&list=PLQVIjL9XTrQ0j-p9woqhCvL3dVSszCsDV"> Cómo utilizar Instagram.</a></li>
+                <li><a href="https://www.youtube.com/watch?v=2qIz3c1gOec&list=PLIV2S4d9Q-MC163l-s1lo1q21b6WQeeZO"> Cómo utilizar Facebook.</a></li>
+                <li><a href="https://www.youtube.com/watch?v=LDb6yMEKmRY&list=PLQVIjL9XTrQ3ryMSfryQ89ClA08YHkjJF"> Cómo utilizar Youtube.</a></li>
+                <li><a href="https://youtu.be/W5lSUiJJcGc?si=scri4QpgnH5gmneQ"> Cómo utilizar X</a></li>
+                <li><a href="https://www.youtube.com/watch?v=CFmSAhvgIYc&list=PLQVIjL9XTrQ2f5Spg1br-HFYdnwpqkT-y"> Cómo utilizar Tiktok.</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 Todos los derechos reservados.</p>
+        <p>Creado por Milton, Sofia, Quinto y Jose.</p>
+    </footer>
+
+    <script>
+        // Función para mostrar y ocultar los tutoriales
+        function toggleTutorials() {
+            const tutorials = document.getElementById('tutorials');
+            tutorials.style.display = (tutorials.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
+
+
+

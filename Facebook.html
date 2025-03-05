@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background: #1877F2; 
+            color: white; 
+            margin: 0; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        .container { 
+            padding: 20px; 
+            max-width: 500px; 
+            background: white; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+            border-radius: 15px; 
+            color: #333; 
+            width: 100%; 
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        .logo { 
+            width: 100px; 
+            transition: transform 0.3s ease;
+        }
+        .logo:hover { 
+            transform: scale(1.1); 
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        a, button { 
+            display: inline-block; 
+            text-decoration: none; 
+            color: white; 
+            background-color: #1877F2; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            transition: 0.3s; 
+            cursor: pointer;
+            border: none;
+        }
+        a:hover, button:hover { 
+            background-color: #1258A7; 
+            transform: scale(1.05); 
+        }
+        .history-text {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 1s forwards;
+            animation-delay: 0.5s;
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .info {
+            display: none;
+            margin-top: 20px;
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .info.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="logo" alt="Facebook">
+        <h1>Facebook</h1>
+        <p>Conéctate con amigos y familiares.</p>
+        <div class="history-text">
+            <p>Fundada en 2004 por Mark Zuckerberg, Facebook empezó como una red social para estudiantes universitarios, y rápidamente se expandió a nivel mundial.</p>
+        </div>
+        <div class="buttons">
+            <a href="https://www.facebook.com" target="_blank">Iniciar sesión</a>
+            <button onclick="toggleInfo()">Más información</button>
+        </div>
+        <div id="facebook" class="info">
+            <h2>Facebook</h2>
+            <p><strong>Fundación:</strong> 2004</p>
+            <p><strong>Usuarios activos:</strong> Más de 3.000 millones.</p>
+            <p>Facebook comenzó como una red social universitaria y evolucionó hasta convertirse en la plataforma más influyente del mundo.</p>
+            <p>Con el tiempo, Facebook ha integrado funciones como grupos, eventos y el Marketplace, ofreciendo a los usuarios herramientas para interactuar de diferentes maneras, desde debates hasta la compra y venta de productos.</p>
+            <p>Facebook también ha jugado un papel clave en la política y los movimientos sociales, proporcionando un espacio donde las personas pueden compartir noticias, participar en protestas y conectar con otros con intereses similares.</p>
+            <p>Sin embargo, Facebook ha enfrentado controversias sobre la privacidad y el manejo de datos de los usuarios, especialmente después del escándalo de Cambridge Analytica, lo que ha generado un debate sobre la confianza en la plataforma.</p>
+            <p>Actualmente, Facebook se enfrenta a una creciente competencia de otras plataformas como Instagram, que es propiedad de la misma compañía, y TikTok, lo que ha hecho que busque innovar constantemente para mantener su relevancia.</p>
+ <a href="https://es.wikipedia.org/wiki/Facebook" target="_blank">Más información en Wikipedia</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var info = document.getElementById('facebook');
+            info.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+

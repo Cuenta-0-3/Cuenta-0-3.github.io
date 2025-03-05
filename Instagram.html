@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7); 
+            color: white; 
+            margin: 0; 
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        .container { 
+            padding: 20px; 
+            max-width: 500px; 
+            background: white; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+            border-radius: 15px; 
+            color: #333; 
+            width: 100%; 
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: scale(1.05);
+        }
+        .logo { 
+            width: 100px; 
+            transition: transform 0.3s ease;
+        }
+        .logo:hover { 
+            transform: scale(1.1); 
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        a { 
+            display: inline-block; 
+            text-decoration: none; 
+            color: white; 
+            background-color: #E1306C; 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            transition: 0.3s; 
+        }
+        a:hover { 
+            background-color: #C8235D; 
+            transform: scale(1.05); 
+        }
+        .history-text {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .info {
+            display: none;
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .social-button {
+            background-color: #E1306C;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .social-button:hover {
+            background-color: #C8235D;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="logo" alt="Instagram">
+        <h1>Instagram</h1>
+        <p>Comparte fotos y videos con amigos y seguidores.</p>
+        <div class="history-text">
+            <p>Instagram fue fundada en 2010 por Kevin Systrom y Mike Krieger, y en 2012 fue adquirida por Facebook. Hoy en día, es una de las redes sociales más populares del mundo.</p>
+        </div>
+        <div class="buttons">
+            <a href="https://www.instagram.com" target="_blank">Iniciar sesión</a>
+            <button class="social-button" onclick="toggleInfo()">Más información</button>
+        </div>
+        <div id="instagram" class="info">
+            <h2>Instagram</h2>
+            <p><strong>Fundación:</strong> 2010</p>
+            <p><strong>Usuarios activos:</strong> Más de 1.500 millones mensuales.</p>
+            <p>Instagram revolucionó la manera en que compartimos imágenes y videos. Su formato visual ha impulsado la creatividad de millones de usuarios, permitiendo que marcas, influencers y emprendedores conecten con audiencias globales de forma efectiva.</p>
+            <p>La plataforma ha evolucionado de ser una aplicación de fotografía a una red social multifuncional que incluye historias, reels, IGTV y más. Con el tiempo, Instagram ha incorporado herramientas como compras en línea para permitir que los negocios interactúen directamente con los consumidores.</p>
+            <p>Instagram ha impactado a la cultura popular, convirtiéndose en la plataforma preferida de los influencers. Muchos usuarios han hecho de Instagram su fuente principal de ingresos, promocionando productos y servicios o creando contenido de entretenimiento.</p>
+            <p>Los algoritmos de Instagram son conocidos por priorizar el contenido visual y dinámico, como videos y fotos con altas tasas de interacción. Esto ha impulsado la creatividad en diferentes formas de contenido, como la fotografía artística y los videos de estilo de vida.</p>
+            <p>Sin embargo, Instagram también ha sido criticada por la presión social que puede generar entre los usuarios, especialmente entre los jóvenes, al fomentar ideales de belleza poco realistas y una constante comparación con los demás.</p>
+<a href="https://es.wikipedia.org/wiki/Instagram" target="_blank">Más información en Wikipedia</a>
+
+
+        </div>
+    </div>
+
+    <script>
+        function toggleInfo() {
+            var info = document.getElementById("instagram");
+            if (info.style.display === "none" || info.style.display === "") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
