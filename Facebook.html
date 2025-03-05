@@ -117,18 +117,15 @@
     </div>
 
   <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Asocia el evento click al botón
-            document.getElementById("toggleInfo()").addEventListener("click", function() {
-                var infoDiv = document.getElementById("Facebook");
-                // Alterna la visibilidad del div
-                if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
-                    infoDiv.style.display = "block";
-                } else {
-                    infoDiv.style.display = "none";
-                }
-            });
-        });
+        function toggleInfo() {
+            console.log("toggleInfo() llamada");
+            var infoDiv = document.getElementById("facebook");
+            if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                infoDiv.style.display = "block";
+            } else {
+                infoDiv.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
