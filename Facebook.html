@@ -116,15 +116,19 @@
         </div>
     </div>
 
-     <script>
-        function toggleInfo() {
-            var infoDiv = document.getElementById("Facebook");
-            if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
-                infoDiv.style.display = "block";
-            } else {
-                infoDiv.style.display = "none";
-            }
-        }
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Asocia el evento click al botón
+            document.getElementById("toggleInfo()").addEventListener("click", function() {
+                var infoDiv = document.getElementById("Facebook");
+                // Alterna la visibilidad del div
+                if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                    infoDiv.style.display = "block";
+                } else {
+                    infoDiv.style.display = "none";
+                }
+            });
+        });
     </script>
 </body>
 </html>
