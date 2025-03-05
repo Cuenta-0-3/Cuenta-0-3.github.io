@@ -116,10 +116,14 @@
         </div>
     </div>
 
-    <script>
+     <script>
         function toggleInfo() {
-            var info = document.getElementById('Facebook');
-            info.classList.toggle('show');
+            var infoDiv = document.getElementById("Facebook");
+            if (infoDiv.style.display === "none" || infoDiv.style.display === "") {
+                infoDiv.style.display = "block";
+            } else {
+                infoDiv.style.display = "none";
+            }
         }
     </script>
 </body>
